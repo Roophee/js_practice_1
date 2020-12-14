@@ -39,12 +39,12 @@ $content-backg: #d4a56a;
     width: 30px;
     height: 30px;
     content: url("https://api.iconify.design/ic:baseline-apps.svg?color=black&height=24");
-    background-color: black;
+    background-color: #0a0a0a;
     top: 15px;
     left: 15px;
-    border: 1px solid black;
+    border: 1px solid #0a0a0a;
     border-radius: 50%;
-    background-color: white;
+    background-color: #ffffff;
 
     &:hover {
         background-color: $second;
