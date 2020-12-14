@@ -7,11 +7,6 @@ const clickfooter = document.querySelector(".footer");
 
 const deBar = document.querySelector(".aside");
 
-clickBurger.addEventListener('click', hideSideBar);
-
-clickContent.addEventListener('click', hideSideBarClickAway);
-clickHeader.addEventListener('click', hideSideBarClickAway);
-clickfooter.addEventListener('click', hideSideBarClickAway);
 
 // MOVE ASIDE & CONTENT
 
@@ -23,6 +18,8 @@ function hideSideBar(e) {
     console.log(e.type)
 
 };
+
+clickBurger.addEventListener('click', hideSideBar);
 
 // Enter-key event show-hide aside
 
@@ -49,19 +46,11 @@ function hideSideBarClickAway(e) {
     };
 };
 
-// LINK ACTIVE COLOR
-// const linkColor = document.querySelectorAll('.nav__link');
-
-// function colorLink() {
-//     linkColor.forEach(l => l.classList.remove('nav__link-active'));
-//     this.classList.add('nav__link-active');
-// }
-
-// linkColor.forEach(l => l.addEventListener('click', colorLink));
+clickContent.addEventListener('click', hideSideBarClickAway);
+clickHeader.addEventListener('click', hideSideBarClickAway);
+clickfooter.addEventListener('click', hideSideBarClickAway);
 
 // ADD CONTENT IN .content
-
-let navLinks = document.querySelectorAll(".nav__link");
 
 function addContentOnClick() {
     clickContent.innerHTML = "";
@@ -82,6 +71,8 @@ function addContentOnClick() {
 </div>`;
     clickContent.innerHTML = makeContent;
 };
+
+const navLinks = document.querySelectorAll(".nav__link");
 
 navLinks.forEach(item => item.addEventListener('click', addContentOnClick));
 
