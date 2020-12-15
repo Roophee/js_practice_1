@@ -50,31 +50,7 @@ clickContent.addEventListener('click', hideSideBarClickAway);
 clickHeader.addEventListener('click', hideSideBarClickAway);
 clickfooter.addEventListener('click', hideSideBarClickAway);
 
-// ADD CONTENT IN .content
-
-function addContentOnClick() {
-    clickContent.innerHTML = "";
-
-    let contentRaw = contentStorage[this.innerText.toLowerCase()];
-    let makeContent = `<div class="content__header">
-    <h1 name="top">
-    ${contentRaw.title.toUpperCase()}
-    </h1>
-</div>
-<div class="content__body">
-    <img src="${contentRaw.imgurl}" alt="${contentRaw.alt}" class="content__img">
-    <p>
-        <span class="content__text">
-            ${contentRaw.text}
-        </span>
-    </p>
-</div>`;
-    clickContent.innerHTML = makeContent;
-};
-
-const navLinks = document.querySelectorAll(".nav__link");
-
-navLinks.forEach(item => item.addEventListener('click', addContentOnClick));
+// Content Storage
 
 
 const contentStorage = {
@@ -109,3 +85,31 @@ const contentStorage = {
         "text": " When visitors walk into the Pantheon in Rome and encounter its colossal dome, they may experience the same theatricality as its guests nearly 2,000 years ago.\"Anyone who steps inside the Pantheon immediately feels the crushing weight of human history, but also the incredible lightness of human creativity,\" said John Ochsendorf, professor of architecture at MIT and former director of the American Academy in Rome. \"You come into this grand space and you look up and you see the sky or a passing cloud. And you think: \'How could they have done this nearly two millennia ago?\'\" The Pantheon is the oldest building in the world that's still in use today. Since the 7th century, it has been a Roman Catholic church. Built around 125 A.D. by the Roman emperor Publius Aelius Hadrianus, it was actually the third iteration of the structure. The first Pantheon caught fire around 80 A.D. and was rebuilt shortly after, but it was struck by lightning and burned down again around 110 A.D. The buildings' ill fate led to rumors that the Pantheon was cursed. The facade of the completed structure riffed on ancient Greek motifs, with a portico entrance featuring a pediment -- a triangular top -- and two rows of Corinthian columns. The interior was sweeping and airy, capped by a dome that to this day -- is still the largest unsupported concrete dome in the world."
     },
 };
+
+// ADD CONTENT IN .content
+
+function addContentOnClick() {
+    clickContent.innerHTML = "";
+
+    let contentRaw = contentStorage[this.innerText.toLowerCase()];
+    let makeContent = `<div class="content__header">
+    <h1 name="top">
+    ${contentRaw.title.toUpperCase()}
+    </h1>
+</div>
+<div class="content__body">
+    <img src="${contentRaw.imgurl}" alt="${contentRaw.alt}" class="content__img">
+    <p>
+        <span class="content__text">
+            ${contentRaw.text}
+        </span>
+    </p>
+</div>`;
+    clickContent.innerHTML = makeContent;
+};
+
+const navLinks = document.querySelectorAll(".nav__link");
+
+navLinks.forEach(item => item.addEventListener('click', addContentOnClick));
+
+
