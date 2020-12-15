@@ -54,7 +54,7 @@ clickfooter.addEventListener('click', hideSideBarClickAway);
 
 
 const contentStorage = {
-    "highway": {
+    highway: {
         title: " Highway Design and Road Safety",
         imgurl: "img/road.jpg",
         alt: "road",
