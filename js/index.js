@@ -3,7 +3,7 @@
 const burger = document.querySelector(".burger");
 const content = document.querySelector(".content");
 const deBar = document.querySelector(".aside");
-const ulElement = document.querySelector(".nav__list");
+const navListOfElements = document.querySelector(".nav__list");
 
 const contentStorage = {
     "highway": {
@@ -102,4 +102,4 @@ function addContentOnClick(e) {
     };
 };
 
-ulElement.addEventListener('click', addContentOnClick);
+navListOfElements.addEventListener('click', addContentOnClick);
